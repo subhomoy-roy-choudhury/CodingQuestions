@@ -1,18 +1,18 @@
-class Graph:
-  def __init__(self):
-    self.no = 0
-    self.adjacentList = []
-  def addVertex(self,node):
-    self.adjacentList[node] = []
-    return self.showConnections()
-  def addEdge(self,node1,node2):
-    self.adjacentList[node1].push(node2)
-    self.adjacentList[node2].push(node1)
-    return self.showConnections()
-  def showConnections(self):
-    for key,val in self.adjacentList :
-      print(f'{key} --> {val}')
+
+def bubble_sort(arr):
+  for i in range(len(arr)) :
+    for j in range(i,len(arr)):
+      if arr[i] > arr[j]:
+        temp = arr[i]
+        arr[i] = arr[j]
+        arr[j] = temp
+  return arr
+
+def selection_sort(arr):
+  
 
 if __name__ == '__main__':
-  graph = Graph()
-  print(graph.addVertex('5'))
+
+  arr = [1,3,2,6,5,4]
+  print(f'Bubble Sort --> {bubble_sort(arr)}')
+
